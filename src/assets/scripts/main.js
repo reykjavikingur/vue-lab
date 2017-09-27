@@ -1,6 +1,6 @@
 require('./router');
 
-require('./components/*.js', {mode: 'expand'});
+var hash = require('./components/**/*.js', {mode: 'hash'});
 
 var routes = [
     {
