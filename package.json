@@ -1,0 +1,29 @@
+{
+  "name": "site-designer",
+  "version": "1.0.0",
+  "description": "Starter kit for front-end web developers to make design prototypes",
+  "author": "Andrew Strader",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "create": "gulp clean && gulp create",
+    "start": "gulp start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2017": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.3.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "partialify": "^3.1.6",
+    "rimraf": "^2.6.1",
+    "underscore": "^1.8.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
