@@ -1,10 +1,8 @@
 var template = `
-<nav>
-    <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/about">about</a></li>
-    </ul>
-</nav>
+<ul class="menu">
+    <li><ix-nav-link href="/">Home</ix-nav-link></li>
+    <li><ix-nav-link href="/about">About</ix-nav-link></li>
+</ul>
 `;
 
 module.exports = Vue.component('ix-menu', {

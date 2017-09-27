@@ -89,6 +89,7 @@ gulp.task('create:scripts', [], () => {
     return browserify('src/assets/scripts/main.js', {
         debug: true
     })
+        .transform('require-globify')
         .transform('babelify') // uses .babelrc
         .bundle()
         .on('error', handleError)

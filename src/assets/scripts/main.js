@@ -1,18 +1,27 @@
-require('./routed-page');
+require('./router');
 
-var Home = require('./components/home');
-var About = require('./components/about');
+require('./components/*.js', {mode: 'expand'});
 
-var routes = {
-    '/': Home,
-    '/about': About,
-};
+var routes = [
+    {
+        path: '/',
+        template: '<ix-home/>'
+    },
+    {
+        path: '/about',
+        template: '<ix-about/>'
+    },
+    {
+        path: () => true,
+        template: '<ix-lost/>'
+    },
+];
 
 module.exports = new Vue({
 
     el: 'ix-site-design',
 
-    template: '<ix-routed-page :routes="routes"/>',
+    template: '<ix-router :routes="routes"/>',
 
     data: {
         routes: routes

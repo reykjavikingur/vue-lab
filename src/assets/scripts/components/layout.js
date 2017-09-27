@@ -1,5 +1,3 @@
-require('./menu');
-
 var template = `
 <div class="page-layout">
 
@@ -14,6 +12,6 @@ var template = `
 </div>
 `;
 
-module.exports = Vue.component('ix-page-layout', {
+module.exports = Vue.component('ix-layout', {
     template: template
 });
