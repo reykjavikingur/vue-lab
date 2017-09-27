@@ -22,7 +22,7 @@ gulp.task('serve', ['watch'], (cb) => {
         files: 'dist/**/*',
         middleware: [
             function (req, res, next) {
-                if (!/^\/assets\b/.test(req.url)) {
+                if (!/^\/assets\//.test(req.url) && !/\.\w+$/.test(req.url)) {
                     req.url = '/index.html';
                 }
                 next();
@@ -31,7 +31,7 @@ gulp.task('serve', ['watch'], (cb) => {
     }, cb);
 });
 
-let pages = 'src/pages/**/*.html';
+let pages = 'src/index.html';
 
 gulp.task('create:pages', [], () => {
     return gulp.src(pages)
@@ -43,7 +43,7 @@ gulp.task('watch:pages', ['create:pages'], () => {
     gulp.watch(pages, ['create:pages']);
 });
 
-let staticFiles = 'src/static/**/*';
+let staticFiles = 'src/assets/!(styles|scripts)/**/*';
 
 gulp.task('create:static', [], () => {
     return gulp.src(staticFiles)
@@ -55,7 +55,7 @@ gulp.task('watch:static', ['create:static'], () => {
     gulp.watch(staticFiles, ['create:static']);
 });
 
-let styles = 'src/styles/**/*.scss';
+let styles = 'src/assets/styles/**/*.scss';
 
 gulp.task('create:styles', [], () => {
     let sass = require('gulp-sass');
@@ -86,10 +86,9 @@ gulp.task('create:scripts', [], () => {
     let source = require('vinyl-source-stream');
     let buffer = require('vinyl-buffer');
 
-    return browserify('src/scripts/main.js', {
+    return browserify('src/assets/scripts/main.js', {
         debug: true
     })
-        .transform('partialify')
         .transform('babelify') // uses .babelrc
         .bundle()
         .on('error', handleError)
@@ -109,7 +108,7 @@ gulp.task('create:scripts', [], () => {
 
 gulp.task('watch:scripts', ['create:scripts'], () => {
     gulp.watch([
-        'src/scripts/**/*',
+        'src/assets/scripts/**/*',
         'package.json'
     ], [
         'create:scripts'
