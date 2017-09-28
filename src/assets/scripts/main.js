@@ -5,7 +5,7 @@ module.exports = new Vue({
 
     el: 'ix-site-design',
 
-    template: '<ix-router lost-path="/lost"/>',
+    template: '<ix-router lost-route="lost"/>',
 
     data: {}
 

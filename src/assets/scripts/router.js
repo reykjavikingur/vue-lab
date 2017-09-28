@@ -1,13 +1,16 @@
+const RouterModel = require('./util/router-model');
+const QueryString = require('query-string');
+
 var routeHash = require('./routes/**/*.js', {mode: 'hash'});
 
 module.exports = Vue.component('ix-router', {
 
-    props: ['lostPath'],
+    props: ['lostRoute'],
 
     data: function () {
         return {
             routeHash: routeHash,
-            currentPath: window.location.pathname
+            currentPath: window.location.pathname,
         };
     },
 
@@ -35,13 +38,19 @@ module.exports = Vue.component('ix-router', {
     methods: {
 
         computeTemplate: function (urlPath) {
+            var router = new RouterModel(Object.keys(this.routeHash));
+            var paths = router.splitRoute(urlPath);
+            var route = paths[0];
+            var extra = paths[1];
+            var component = route ? this.routeHash[route] : this.routeHash[this.lostRoute || '404'];
             var template;
-            var component = this.computeComponent(urlPath) || this.computeComponent(this.lostPath || '/404');
             if (component) {
                 try {
                     // TODO pass data parsed from query
                     // TODO validate component.options.name
-                    template = `<${component.options.name}/>`;
+                    // TODO validate extra
+                    var query = JSON.stringify(QueryString.parse(window.location.search));
+                    template = `<${component.options.name} path="${extra}" query='${query}'/>`;
                 }
                 catch (e) {
                     template = `<div>Internal Error</div>`;
@@ -53,24 +62,6 @@ module.exports = Vue.component('ix-router', {
             return template;
         },
 
-        computeComponent: function(urlPath) {
-            var componentPath = this.computeComponentPath(urlPath);
-            var component = this.routeHash[componentPath];
-            return component;
-        },
-
-        computeComponentPath: function (urlPath) {
-            return String(urlPath).split('/').filter(part => Boolean(part)).join('/') || 'index';
-        },
-
-        matches: function (path, currentPath) {
-            if (typeof path === 'function') {
-                return path(currentPath);
-            }
-            else {
-                return path === currentPath;
-            }
-        }
     }
 
 });
