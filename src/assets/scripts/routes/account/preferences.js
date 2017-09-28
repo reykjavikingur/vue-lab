@@ -1,7 +1,7 @@
 var template = `
-<div>
+<ix-layout>
 user preferences
-</div>
+</ix-layout>
 `;
 
 module.exports = Vue.component('ix-user-preferences', {

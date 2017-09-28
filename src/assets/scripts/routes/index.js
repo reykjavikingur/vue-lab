@@ -1,9 +1,10 @@
 var template = `
 <ix-layout>
-    <h2 slot="title">Welcome</h2>
-    <div slot="main">
+    <h2>Welcome</h2>
+    <main>
         What do you think of this internal home template? Awesome, right?
-    </div>
+    </main>
+    
 </ix-layout>
 `;
 

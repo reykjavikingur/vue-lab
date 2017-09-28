@@ -1,13 +1,11 @@
 var template = `
-<div class="page-layout">
+<div class="layout">
 
-    <slot name="title"></slot>
+    <ix-header/>
     
-    <ix-menu/>
+    <slot></slot>
     
-    <slot name="main"></slot>
-    
-    <hr/>
+    <ix-footer/>
     
 </div>
 `;

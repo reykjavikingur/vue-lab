@@ -1,10 +1,10 @@
 var template = `
 <ix-layout>
-    <h2 slot="title">Product</h2>
-    <div slot="main" class="product">
-    <div>path = {{path}}</div>
-    <div>query = {{query}}</div>
-    </div>
+    <h2>Product</h2>
+    <main>
+        <div>path = {{path}}</div>
+        <div>query = {{query}}</div>
+    </main>
 </ix-layout>
 `;
 

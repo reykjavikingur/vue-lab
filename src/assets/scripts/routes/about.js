@@ -1,9 +1,9 @@
 var template = `
 <ix-layout>
-    <h2 slot="title">About this site</h2>
-    <div slot="main">
+    <h2 >About this site</h2>
+    <main>
         This is a site all about site-designer.
-    </div>
+    </main>
 </ix-layout>
 `;
 
