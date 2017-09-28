@@ -1,30 +1,12 @@
 require('./router');
-
-var hash = require('./components/**/*.js', {mode: 'hash'});
-
-var routes = [
-    {
-        path: '/',
-        template: '<ix-home/>'
-    },
-    {
-        path: '/about',
-        template: '<ix-about/>'
-    },
-    {
-        path: () => true,
-        template: '<ix-lost/>'
-    },
-];
+require('./components/**/*.js', {mode: 'expand'});
 
 module.exports = new Vue({
 
     el: 'ix-site-design',
 
-    template: '<ix-router :routes="routes"/>',
+    template: '<ix-router lost-path="/lost"/>',
 
-    data: {
-        routes: routes
-    }
+    data: {}
 
 });
