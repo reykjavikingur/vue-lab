@@ -1,6 +1,6 @@
-# Site Designer
+# Vue Lab
 
-Starter kit for front-end developers to create design prototypes.
+Starter kit using VueJS to create site UX design prototypes.
 
 
 ## Setup
@@ -11,5 +11,4 @@ Starter kit for front-end developers to create design prototypes.
 
 ## TODO
 
-* Make directory structure in `src` better reflect what ends up in `dist`
-* Browserify all VueJS files to avoid `require` statements.
+* Incorporate https://vuetifyjs.com/

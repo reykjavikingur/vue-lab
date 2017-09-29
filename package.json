@@ -1,7 +1,7 @@
 {
-  "name": "site-designer",
+  "name": "vue-lab",
   "version": "1.0.0",
-  "description": "Starter kit for front-end web developers to make design prototypes",
+  "description": "Starter kit using VueJS to create site UX design prototypes.",
   "author": "Andrew Strader",
   "license": "ISC",
   "main": "index.js",
