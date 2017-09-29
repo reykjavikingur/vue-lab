@@ -10,6 +10,10 @@
     "start": "gulp start",
     "test": "mocha \"src/**/*.spec.js\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reykjavikingur/vue-lab.git"
+  },
   "dependencies": {
     "babel-preset-env": "^1.5.2",
     "babel-preset-es2017": "^6.24.1",
