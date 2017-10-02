@@ -60,7 +60,3 @@ The files in `src/assets/scripts/components` are the Vue components that you can
 The SASS files are in `src/assets/styles`.
 
 
-
-## TODO
-
-* Incorporate materials design library such as https://vuetifyjs.com/
