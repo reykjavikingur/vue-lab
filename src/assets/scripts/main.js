@@ -3,9 +3,9 @@ require('./components/**/*.js', {mode: 'expand'});
 
 module.exports = new Vue({
 
-    el: 'ix-site-design',
+    el: 'vl-main',
 
-    template: '<ix-router lost-route="lost"/>',
+    template: '<vl-router lost-route="lost"/>',
 
     data: {}
 

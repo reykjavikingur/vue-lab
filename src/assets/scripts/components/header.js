@@ -1,9 +1,9 @@
 var template = `
 <header>
-<ix-menu/>
+<vl-menu/>
 </header>
 `;
 
-module.exports = Vue.component('ix-header', {
+module.exports = Vue.component('vl-header', {
     template: template
 });

@@ -1,12 +1,12 @@
 var template = `
-<ix-layout>
+<vl-layout>
     <h2 >About this site</h2>
     <main>
         This is a site all about site-designer.
     </main>
-</ix-layout>
+</vl-layout>
 `;
 
-module.exports = Vue.component('ix-about', {
+module.exports = Vue.component('about-page', {
     template: template
 });

@@ -5,10 +5,9 @@ Starter kit using VueJS to create site UX design prototypes.
 
 ## Create a new site
 
-* `npm install -g gnat`
-* `gnat clone https://github.com/reykjavikingur/vue-lab.git YOUR_SITE`
-* `cd YOUR_SITE`
-* `npm install`
+* `npm install -g vuelab-generator`
+* `vuelab init YOUR_PROJECT_NAME`
+* `cd YOUR_PROJECT_NAME`
 
 
 ## Run the local web server
@@ -53,7 +52,7 @@ The files in `src/assets/scripts/routes` correspond to the URL's of the web serv
 
 The files in `src/assets/scripts/components` are the Vue components that you can use in any other component's template. For example:
 
-* The file `src/assets/scripts/components/menu.js` defines a Vue component with the name `ix-menu`. Use it in another template as `<is-menu/>`.
+* The file `src/assets/scripts/components/menu.js` defines a Vue component with the name `vl-menu`. Use it in another template as `<vl-menu/>`.
 
 
 ## Edit Styles

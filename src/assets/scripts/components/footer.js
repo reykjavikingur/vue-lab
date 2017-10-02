@@ -6,6 +6,6 @@ Copyright &copy 2017
 </footer>
 `;
 
-module.exports = Vue.component('ix-footer', {
+module.exports = Vue.component('vl-footer', {
     template: template
 });

@@ -1,14 +1,14 @@
 var template = `
-<ix-layout>
+<vl-layout>
     <h2>Product</h2>
     <main>
         <div>path = {{path}}</div>
         <div>query = {{query}}</div>
     </main>
-</ix-layout>
+</vl-layout>
 `;
 
-module.exports = Vue.component('ix-product', {
+module.exports = Vue.component('product-page', {
     props: ['path', 'query'],
     template: template
 });

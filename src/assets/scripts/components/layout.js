@@ -1,15 +1,15 @@
 var template = `
 <div class="layout">
 
-    <ix-header/>
+    <vl-header/>
     
     <slot></slot>
     
-    <ix-footer/>
+    <vl-footer/>
     
 </div>
 `;
 
-module.exports = Vue.component('ix-layout', {
+module.exports = Vue.component('vl-layout', {
     template: template
 });

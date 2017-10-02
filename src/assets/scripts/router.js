@@ -3,7 +3,7 @@ const QueryString = require('query-string');
 
 var routeHash = require('./routes/**/*.js', {mode: 'hash'});
 
-module.exports = Vue.component('ix-router', {
+module.exports = Vue.component('vl-router', {
 
     props: ['lostRoute'],
 

@@ -1,12 +1,12 @@
 var template = `
-<ix-layout>
+<vl-layout>
     <h2>404 Not Found</h2>
     <main>
         We are unable to find the page you requested.
     </main>
-</ix-layout>
+</vl-layout>
 `;
 
-module.exports = Vue.component('ix-lost', {
+module.exports = Vue.component('lost-page', {
     template: template
 });

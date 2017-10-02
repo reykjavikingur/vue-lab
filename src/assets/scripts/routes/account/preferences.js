@@ -1,9 +1,9 @@
 var template = `
-<ix-layout>
+<vl-layout>
 user preferences
-</ix-layout>
+</vl-layout>
 `;
 
-module.exports = Vue.component('ix-user-preferences', {
+module.exports = Vue.component('user-preferences-page', {
     template: template
 });
