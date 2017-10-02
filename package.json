@@ -1,5 +1,5 @@
 {
-  "name": "vue-lab",
+  "name": "vuelab",
   "version": "1.0.0",
   "description": "Starter kit using VueJS to create site UX design prototypes.",
   "author": "Andrew Strader",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reykjavikingur/vue-lab.git"
+    "url": "git+https://github.com/reykjavikingur/vuelab.git"
   },
   "dependencies": {
     "babel-preset-env": "^1.5.2",
